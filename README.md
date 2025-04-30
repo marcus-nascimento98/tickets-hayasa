@@ -144,4 +144,4 @@ python manage.py runserver
 ## 📬 Contato
 
 Desenvolvido por **Marcus Vinícius Quintanilha**  
-[LinkedIn](https://www.linkedin.com/in/seu-perfil) • [GitHub](https://www.linkedin.com/in/marcus-nascimento98/)
+[LinkedIn](https://www.linkedin.com/in/marcus-nascimento98/) • [GitHub](https://github.com/marcus-nascimento98)
