@@ -131,7 +131,7 @@ python manage.py runserver
 ![Visualização Detalhada](screenshots/tela-login.png)
 
 ### 📝 Ticket Rejeitado
-![Visualização Detalhada](screenshots/tela-login.png)
+![Visualização Detalhada](screenshots/tela-rejeitado.png)
 
 ---
 
@@ -144,4 +144,4 @@ python manage.py runserver
 ## 📬 Contato
 
 Desenvolvido por **Marcus Vinícius Quintanilha**  
-[LinkedIn](https://www.linkedin.com/in/seu-perfil) • [GitHub](https://github.com/seuusuario)
+[LinkedIn](https://www.linkedin.com/in/seu-perfil) • [GitHub](https://www.linkedin.com/in/marcus-nascimento98/)
