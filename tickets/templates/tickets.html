@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="car-grid">
+  {% for ticket in tickets %}
+  <a {% if request.user.is_superuser or ticket.status_ticket == 1 %} href="{% url 'ticket_detail' ticket.pk %}"
+    {% endif %} class="ticket-link {% if ticket.status_ticket == 0 %} rejected-ticket {% endif %}">
+    <div class="testimonial-item">
+      <h3>{{ ticket.name_user }}</h3>
+      <p><strong>Filial:</strong> {{ ticket.branch }}</p>
+      <p><strong>Criação:</strong> {{ ticket.date }}</p>
+      <p><strong>Assunto:</strong> {{ ticket.subject_purchase }}</p>
+      <p><strong>Observação:</strong> {{ ticket.description }}</p>
+      {% if ticket.who_approved %}<p><strong>Aprovado Por:</strong> {{ ticket.who_approved }}</p>{% endif %}
+      {% if ticket.date_approved %}<p><strong>Data Aprovação:</strong> {{ ticket.date_approved }}</p>{% endif %}
+      {% if ticket.reason_for_rejection %}<p><strong>Motivo da Rejeição:</strong> {{ ticket.reason_for_rejection }}</p>{% endif %}
+
+      <h4>Cotações:</h4>
+      <form method="post" action="{% url 'tickets_list' %}">
+        {% csrf_token %}
+        {% if not ticket.has_quotes %}
+        <p>Sem cotações disponíveis.</p>
+        {% else %}
+        {% for quote in ticket.quote_ticket.all %}
+        {% if quote.description_quotes %}
+        <div class="quote-item {% if quote.status == 1 %} selected-quote {% endif %}">
+          <p>
+            <strong>Descrição:</strong> <span class="quote-description-result">{{ quote.description_quotes }}</span>
+          </p>
+          <p>
+            <strong>Valor:</strong> {% if quote.value %} <span class="quote-value">R$ {{ quote.value }}</span>
+          </p>
+          {% endif %}
+        </div>
+        {% endif %}
+        {% endfor %}
+        {% endif %}
+      </form>
+    </div>
+  </a>
+  {% endfor %}
+</div>
+
+<div class="pagination">
+  <ul class="pagination-list">
+    {% if page_obj.has_previous %}
+    <li><a href="?page=1" class="pagination-link">&laquo; Primeira</a></li>
+    <li><a href="?page={{ page_obj.previous_page_number }}" class="pagination-link">Anterior</a></li>
+    {% endif %}
+
+    <li class="pagination-current">
+      Página {{ page_obj.number }} de {{ page_obj.paginator.num_pages }}
+    </li>
+
+    {% if page_obj.has_next %}
+    <li><a href="?page={{ page_obj.next_page_number }}" class="pagination-link">Próxima</a></li>
+    <li><a href="?page={{ page_obj.paginator.num_pages }}" class="pagination-link">Última &raquo;</a></li>
+    {% endif %}
+  </ul>
+</div>
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="register-container">
+    <div class="register-card">
+        <h2 class="form-title">Criar Conta</h2>
+        <form method="post">
+            {% csrf_token %}
+
+            <div class="form-field">
+                {{ user_form.username.errors }}
+                <label for="id_username">Usuário:</label>
+                {{ user_form.username }}
+            </div>
+            
+            <div class="form-field">
+                {{ user_form.password1.errors }}
+                <label for="id_password1">Senha:</label>
+                {{ user_form.password1 }}
+            </div>
+
+            <div class="form-field">
+                {{ user_form.password2.errors }}
+                <label for="id_password2">Confirmação de Senha:</label>
+                {{ user_form.password2 }}
+            </div>
+
+            <div class="form-field superuser-field">
+                <label for="is_superuser" class="superuser-label">Administrador</label>
+                <input type="checkbox" name="is_superuser" id="is_superuser" class="superuser-checkbox">
+            </div>
+
+            <div class="form-action">
+                <input type="submit" value="Cadastrar">
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

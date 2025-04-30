@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="ticket-container">
+    <div class="ticket-card">
+        <h2 class="form-title">Criar Novo Ticket</h2>
+
+        <form method="post">
+            {% csrf_token %}
+
+            <div class="form-section">
+                <h3 class="section-title">Informações do Ticket</h3>
+                <div class="form-group">
+                    {{ ticket_form.as_p }}
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3 class="section-title">Cotações</h3>
+
+                <div class="quote-group">
+                    <div class="quote-header">
+                        <h4>Cotação 1</h4>
+                        <div class="form-group">
+                            {{ quote_forms.0.as_p }}
+                        </div>
+                    </div>
+
+                    <div class="quote-header">
+                        <h4>Cotação 2</h4>
+                        <div class="form-group">
+                            {{ quote_forms.1.as_p }}
+                        </div>
+                    </div>
+
+                    <div class="quote-header">
+                        <h4>Cotação 3</h4>
+                        <div class="form-group">
+                            {{ quote_forms.2.as_p }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-action">
+                <input type="submit" value="Cadastrar Ticket">
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

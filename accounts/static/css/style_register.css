@@ -1,0 +1,117 @@
+/* Estilo geral para o container */
+.register-container {
+  display: flex;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.register-card {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.form-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.form-field {
+  margin-bottom: 18px;
+  text-align: left;
+}
+
+.form-field label {
+  display: block;
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.form-field input {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.form-field input:focus {
+  border-color: #1e90ff;
+  background-color: #fff;
+  outline: none;
+}
+
+.form-action input {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  background-color: #df0032;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-action input:hover {
+  background-color: #dc3545;
+}
+
+.form-field .errorlist {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+/* Estilo específico para o campo de Superusuário */
+.superuser-field {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 18px;
+}
+
+.superuser-label {
+  font-size: 14px;
+  color: #555;
+  margin-right: 10px;
+  margin-top: 6px;
+}
+
+.superuser-checkbox {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.superuser-checkbox:checked {
+  background-color: #1e90ff;
+  border-color: #1e90ff;
+}
+
+.superuser-checkbox:focus {
+  outline: none;
+  border-color: #1e90ff;
+}
+
+/* Ajustes no tamanho da tela */
+@media (max-width: 768px) {
+  .register-card {
+    padding: 20px;
+    width: 80%;
+  }
+}

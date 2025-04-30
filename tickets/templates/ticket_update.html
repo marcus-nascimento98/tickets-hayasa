@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="car-grid" id="ticket-edit-container">
+    <div class="testimonial-item">
+        <form method="post">
+            {% csrf_token %}
+
+            <h3>Informações do Ticket:</h3>
+            <table>
+                {{ form.as_table }}
+            </table>
+
+            <table>
+                {{ quote_formset.management_form }}
+                <h3 class="h3-cotacao">Cotações:</h3>
+                <tr>
+                    {{ quote_formset.as_table}}
+                </tr>
+            </table>
+
+            <div class="buttons-container">
+                <button type="submit" class="btn-save">Salvar</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
