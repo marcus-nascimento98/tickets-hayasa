@@ -1,6 +1,6 @@
 # 🛠️ Sistema de Tickets para Aprovação de Orçamentos
 
-Este projeto foi desenvolvido como parte da minha prática com **Django**, simulando um fluxo de criação e aprovação de orçamentos para uso administrativo. Ele possui controle de usuários, autenticação, filtros e lógica de permissões baseada em cargos (Administrador e Funcionário).
+Este projeto foi desenvolvido para atender demandas internas da companhia em que trabalho e também como parte da minha prática com **Django**, simulando um fluxo de criação e aprovação de orçamentos para uso administrativo. Ele possui controle de usuários, autenticação, filtros e lógica de permissões baseada em cargos (Administrador e Funcionário).
 
 ---
 
@@ -64,8 +64,8 @@ Na barra de navegação:
 Clone o repositório:
 
 ```bash
-git clone https://github.com/seuusuario/seuprojeto.git
-cd seuprojeto
+git clone https://github.com/marcus-nascimento98/tickets-hayasa
+cd tickets-hayasa
 ```
 
 Suba os containers:
@@ -112,7 +112,26 @@ python manage.py runserver
 
 ## 🖼️ Capturas de Tela
 
-*(Adicione aqui imagens do sistema em uso — página de login, listagem de tickets, visualização detalhada, etc.)*
+### 🔐 Tela de Login
+![Tela de Login](screenshots/tela-login.png)
+
+### 📋 Listagem de Tickets
+![Listagem de Tickets](screenshots/tickets.png)
+
+### 📝 Visualização Detalhada
+![Visualização Detalhada](screenshots/ticket-detalhado.png)
+
+### 📝 Novo Ticket
+![Visualização Detalhada](screenshots/novo-ticket.png)
+
+### 📝 Tela de Cadastro
+![Visualização Detalhada](screenshots/tela-cadastro.png)
+
+### 📝 Tela de Login
+![Visualização Detalhada](screenshots/tela-login.png)
+
+### 📝 Ticket Rejeitado
+![Visualização Detalhada](screenshots/tela-login.png)
 
 ---
 
