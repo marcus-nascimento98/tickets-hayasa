@@ -131,7 +131,7 @@ python manage.py runserver
 ![Visualização Detalhada](screenshots/tela-login.png)
 
 ### 📝 Ticket Rejeitado
-![Visualização Detalhada](screenshots/tela-rejeitado.png)
+![Visualização Detalhada](screenshots/ticket-rejeitado.png)
 
 ---
 
